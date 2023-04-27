@@ -26,15 +26,14 @@ class MessageListState extends State<MessageList> {
     final messageDao = Provider.of<MessageDao>(context, listen: false);
 
     final userDao = Provider.of<UserDao>(context, listen: false); 
-    email = userDao.email();
+   // email = userDao.email();
 
     return Scaffold(
       appBar: AppBar(
         title: const Text('RayChat'),
        actions: [
- IconButton(
-onPressed: () {
- userDao.logout();
+ IconButton(onPressed: () {
+userDao.logout();
  },
  icon: const Icon(Icons.logout),
  ),
